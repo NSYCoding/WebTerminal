@@ -25,6 +25,6 @@ How to use:
     PORT=5643 (optional)
 - Save the `.env`
 - Run `npm install`
-- Run npm run start
+- Run `npm run start`
 
 Tada! Now you have Terminal in the web.
