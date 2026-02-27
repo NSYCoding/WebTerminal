@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://0.0.0.0:5643');
+const ws = new WebSocket('ws://192.168.1.142:5643');
 const outputDiv = document.getElementById('output');
 const commandInput = document.querySelector('input[type="text"]');
 let isAuthenticated = false;
