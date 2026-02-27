@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { createServer } from 'node:http';
 import { WebSocketServer } from 'ws';
-import { exec, execFile } from 'node:child_process';
+import { execFile } from 'node:child_process';
 import crypto from 'node:crypto';
 import { platform } from 'node:os';
 dotenv.config();
@@ -27,6 +27,8 @@ const DISALLOWED_COMMANDS = new Set(process.env.DISALLOWED_COMMANDS?.split(',').
 
 const SHELL = platform() === 'win32' ? 'powershell.exe' : '/bin/sh';
 const SHELL_ARGS = platform() === 'win32' ? ['-NoProfile', '-Command', '$ProgressPreference = "SilentlyContinue";'] : ['-c'];
+
+app.use(express.static('frontend'))
 
 wss.on('connection', (ws) => {
     console.log('Client connected');
