@@ -19,7 +19,7 @@ const wss = new WebSocketServer({ server });
 const VALID_USERNAME = process.env.VALID_USERNAME;
 const VALID_PASSWORD = process.env.VALID_PASSWORD;
 const MAX_MESSAGE_SIZE = 50 * 1024;
-const AUTH_TIMEOUT = 50000;
+const AUTH_TIMEOUT = 1000000;
 const RATE_LIMIT_WINDOW = 60000;
 const MAX_COMMANDS_PER_WINDOW = 10;
 
